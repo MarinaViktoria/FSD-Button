@@ -1,4 +1,5 @@
 import { Stack } from "./shared/ui/Stack";
+import { Button } from "./shared/ui/Button";
 import "./App.css";
 import { useState } from "react";
 
@@ -10,6 +11,7 @@ function App() {
         <p>Number: {count}</p>
         <button onClick={() => setCount((prev) => prev + 1)}>Click</button>
       </Stack>
+      <Button color="primary">Отправить</Button>
     </>
   );
 }

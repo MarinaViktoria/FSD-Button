@@ -31,10 +31,10 @@ export const Stack = ({
   };
 
   const mapGap = {
-    8: "gap8",
-    16: "gap16",
-    24: "gap24",
-    32: "gap32",
+    8: styles.gap8,
+    16: styles.gap16,
+    24: styles.gap24,
+    32: styles.gap32,
   };
 
   const mapStackTag = {
@@ -48,16 +48,14 @@ export const Stack = ({
     [styles.max]: max,
     [styles.wrap]: wrap,
   };
-  console.log(mode);
 
   const additional = [
     directionClasses[direction],
     alignClasses[align],
     justifyClasses[justify],
-    gap && styles[mapGap[gap]],
+    gap && mapGap[gap],
     className,
   ];
-  console.log(additional);
 
   const Tag = mapStackTag[tag] || "div";
 
@@ -67,5 +65,3 @@ export const Stack = ({
     </Tag>
   );
 };
-
-console.log(styles);
