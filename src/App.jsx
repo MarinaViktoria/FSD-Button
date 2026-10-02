@@ -1,19 +1,23 @@
 import { Stack } from "./shared/ui/Stack";
 import { Button } from "./shared/ui/Button";
 import "./App.css";
-import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    console.log("clicked");
+  };
   return (
     <>
-      <Stack direction="column" align="center" justify="center" gap={16}>
-        <p>Number: {count}</p>
-        <button onClick={() => setCount((prev) => prev + 1)}>Click</button>
+      <Stack direction="row" gap={16}>
+        <Button onClick={handleClick} color="primary">
+          Send
+        </Button>
+        <Button color="secondary">Send</Button>
+        <Button color="outline">Send</Button>
+        <Button color="transparent">Send</Button>
+        <Button color="disabled">Send</Button>
       </Stack>
-      <Button color="primary">Отправить</Button>
     </>
   );
 }
-
 export default App;
