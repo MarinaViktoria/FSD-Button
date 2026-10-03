@@ -8,6 +8,7 @@ export const Stack = ({
   align, //center, end
   justify, //between, center
   gap, //8, 16, 24, 32
+  margin, //8, 16
   tag = "div", //section, article, aside, main, nav, header
   wrap,
   max,
@@ -37,6 +38,11 @@ export const Stack = ({
     32: styles.gap32,
   };
 
+  const mapMargin = {
+    8: styles.margin8,
+    16: styles.margin16,
+  };
+
   const mapStackTag = {
     main: "main",
     div: "div",
@@ -54,6 +60,7 @@ export const Stack = ({
     alignClasses[align],
     justifyClasses[justify],
     gap && mapGap[gap],
+    margin && mapMargin[margin],
     className,
   ];
 
